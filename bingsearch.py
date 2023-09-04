@@ -45,22 +45,16 @@ sleep(0.5)
 pyag.press('pgup')
 sleep(1)
 
-## Pesquisa entre 1991 a 1991
+## Pesquisa entre 1991 a 1999
 
 for i in range(1,10):
     # click na barra de pesquisa
     pyag.click(tela,135,duration=0.5)
     sleep(randrange(2,5))
 
-    # Apagar somente 1 ou 2 digitos da pesquisa
-    if i < 10:
-        pyag.press('backspace')
-        sleep(0.25)
-    else:
-        pyag.press('backspace')
-        sleep(0.25)
-        pyag.press('backspace')
-        sleep(0.25)
+    # Apagar somente 1o digito da pesquisa
+    pyag.press('backspace')
+    sleep(0.25)
 
     # Escrever o ultimo digito a ser pesquisado
     pyag.write(str(i))
@@ -95,7 +89,6 @@ pyag.press('pgup')
 sleep(0.5)
 pyag.press('pgup')
 sleep(1)
-
 
 for i in range(1,24):
     # click na barra de pesquisa
